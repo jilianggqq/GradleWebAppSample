@@ -6,7 +6,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	version="2.5">
 	<servlet>
 		<servlet-name>DaysToGo</servlet-name>
-		<servlet-class>com.mindstorm.webapp.DaysToGoServlet</servlet-class>
+		<servlet-class>edu.gqq.web.DaysToGoServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>DaysToGo</servlet-name>
@@ -15,7 +15,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 
 	<servlet>
 		<servlet-name>HelloServlet</servlet-name>
-		<servlet-class>com.mindstorm.webapp.HelloServlet</servlet-class>
+		<servlet-class>edu.gqq.web.HelloServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>HelloServlet</servlet-name>

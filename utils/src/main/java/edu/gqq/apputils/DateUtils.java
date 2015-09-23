@@ -1,4 +1,4 @@
-package com.mindstorm.apputils;
+package edu.gqq.apputils;
 
 import org.joda.time.Days;
 import org.joda.time.LocalDate;

@@ -3,4 +3,14 @@ subprojects {
    repositories {
       mavenCentral()
    }
+   
+   test {
+		testLogging {
+		// Show that tests are run in the command-line output
+			events 'started', 'passed'
+			// show standard out and standard error of the test JVM(s) on the console
+	  		testLogging.showStandardStreams = true
+		}
+	}
 }
+

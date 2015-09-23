@@ -1,8 +1,12 @@
-package com.mindstorm.webapp;
+package edu.gqq.web;
 
 import java.io.IOException;
-import javax.servlet.http.*;
-import com.mindstorm.apputils.DateUtils;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import edu.gqq.apputils.DateUtils;
 
 public class DaysToGoServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
