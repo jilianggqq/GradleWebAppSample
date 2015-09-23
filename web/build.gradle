@@ -1,11 +1,37 @@
 apply plugin: "war"
-apply plugin: "jetty"
+apply plugin: 'org.akhikhl.gretty'
+// apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
+
+
+repositories {
+  jcenter()
+  mavenCentral()
+  // enable this to use snapshot versions of Gretty:
+  // maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local' }
+}
 
 dependencies {
    compile project(":utils")
-   compile "javax.servlet:servlet-api:2.5"
+   //compile "javax.servlet:servlet-api:2.5"
+   compile 'javax.servlet:javax.servlet-api:3.1.0'
 }
 
-httpPort = 8080
-stopPort = 9090
-stopKey = "stopKey"
+buildscript {
+  repositories {
+    jcenter()
+    // enable this to use snapshot versions of Gretty:
+    // maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local' }
+  }
+
+  dependencies {
+    classpath 'org.akhikhl.gretty:gretty:+'
+  }
+}
+
+gretty{
+	port = 8081
+}
+
+
+
+
