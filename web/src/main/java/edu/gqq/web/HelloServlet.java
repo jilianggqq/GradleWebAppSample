@@ -21,4 +21,14 @@ public class HelloServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		super.doPost(req, resp);
 	}
+
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// super.doGet(req, resp);
+		// this method will overwrite the parent service method.
+		// it will not call doGet method
+		PrintWriter writer = resp.getWriter();
+		writer.write("Hello custom service");
+		writer.close();
+	};
 }
